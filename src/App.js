@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import {Route, BrowserRouter, Routes} from 'react-router-dom'
+import LoginPage from './Components/LoginPage';
+import NewAccount from './Components/NewAccount';
 import './App.css';
 
+const App = () => (
+    <BrowserRouter>
+      <Routes>
+        <Route exact path='/LoginPage' Component={LoginPage} />
+        <Route exact path="/NewAccount" Component={NewAccount} />
+      </Routes>
+    </BrowserRouter>  
+)
+
+export default App;
+
+
+
+
+
+/* import React, { useEffect, useState } from 'react'
+import Axios from 'axios';
+
 function App() {
+  const [data, setData] = useState("");
+
+  const getData = async() => {
+    const response = await Axios.get("http://localhost:5000/getData");
+    setData(response.data);
+  }
+
+  useEffect(() => {
+    getData()
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {data}
     </div>
   );
 }
 
 export default App;
+ */
