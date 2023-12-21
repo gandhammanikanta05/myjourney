@@ -1,6 +1,8 @@
 import {Route, BrowserRouter, Routes} from 'react-router-dom'
 import LoginPage from './Components/LoginPage';
 import NewAccount from './Components/NewAccount';
+import Home from './Components/Home';
+
 import './App.css';
 
 const App = () => (
@@ -8,6 +10,7 @@ const App = () => (
       <Routes>
         <Route exact path='/LoginPage' Component={LoginPage} />
         <Route exact path="/NewAccount" Component={NewAccount} />
+        <Route exact path="/" Component={Home} />
       </Routes>
     </BrowserRouter>  
 )

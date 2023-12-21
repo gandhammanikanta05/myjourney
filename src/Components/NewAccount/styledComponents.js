@@ -79,3 +79,9 @@ export const Para = styled.p`
 font-family: 'Verdana';
 font-weight: 550;
 `;
+
+export const WarningMsg = styled.p`
+font-family: 'Verdana';
+font-weight: 550;
+color: red;
+`;
